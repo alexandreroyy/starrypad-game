@@ -5,22 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jeu de mémoire</title>
     <link rel="stylesheet" href="bootstrap.css" />
-    <link rel="icon" href="thinking.png" />
   </head>
-  <body>
-    <main>
-      <nav class="navbar navbar-expand-lg bg-primary py-3">
+  <body class="bg-light">
+    <main class="p-3">
+      <nav class="navbar navbar-expand bg-primary py-3 rounded-3">
         <div class="container">
-          <img
-            src="thinking.png"
-            width="50"
-            height="50"
-            class="d-inline-block align-text-top me-2"
-          />
           <a class="navbar-brand text-light fs-3" href="#accueil"
             >Jeu de mémoire</a
           >
-          <div class="collapse navbar-collapse">
+          <div class="navbar-collapse">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
                 <a class="nav-link text-light" href="#usage">Usage proposé</a>
@@ -42,6 +35,118 @@
           </div>
         </div>
       </nav>
+
+      <div class="container py-4">
+        <section id="usage" class="mb-5">
+          <h2 class="h3 mb-3">Usage proposé</h2>
+          <p class="lead text-secondary">
+            Hypothèse d'utilisation de matériel informatique plausible
+          </p>
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <p class="card-text">
+                L'idée est d'utiliser le Donner StarryPad (contrôleur MIDI à 16 pads lumineux) comme support d'un jeu de mémoire basé sur les lumières. Je veu faire une sorte de jeu comme "Simon Says".
+              </p>
+              <p class="mt-3 mb-2">Déroulement d'une partie</>
+              <ul class="mb-0">
+                <li>
+                  L'utilisateur lance une partie en appuyant sur un bouton dédié.
+                </li>
+                <li>
+                  Une séquence de pads s'allume successivement (couleurs/lumières). La séquence est aléatoire.
+                </li>
+                <li>
+                  À la fin de la démo, l'utilisateur doit reproduire la même séquence en appuyant sur les mêmespads dans le bon ordre.
+                </li>
+                <li>
+                  La difficulté peut augmenter progressivement (longueur de la séquence, vitesse, etc.).
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="description" class="mb-5">
+          <h2 class="h3 mb-3">Description de l'objet</h2>
+
+          <p class="lead text-secondary">Résumé des fonctionnalités</p>
+          <div class="card shadow-sm mb-4">
+            <div class="card-body">
+              <p class="card-text mb-2">La fonctionnalités de base de ce pad est de l'utiliser avec un logciel comme GarageBand pour pouvoir jouer des notes et ensuite les enregistrer pour créer de la musique.</p>
+              <p class="card-text mb-2">Coté hardware, ce pad est composé de:</p>
+              <ul class="mb-0">
+                <li>16 pads en grille 4x4</li>
+                <li>Rétroéclairage RGB</li>
+                <li>Connexion USB-C à USB-A</li>
+              </ul>
+            </div>
+          </div>
+
+          <p class="lead text-secondary">Fabricant(s)</p>
+          <div class="card shadow-sm mb-4">
+            <div class="card-body">
+              <p class="card-text mb-0">Donner Music</p>
+            </div>
+          </div>
+
+          <p class="lead text-secondary">Autres éléments pertinents</p>
+          <div class="card shadow-sm mb-4">
+            <div class="card-body">
+              <p class="card-text mb-0">Le StarryPad peut être piloté depuis un ordinateur avec Python grâce à des librairies MIDI (par exemple mido ou rtmidi), ce qui permet d'écrire des scripts pour lire les appuis sur les pads et contrôler leurs lumières.</p>
+            </div>
+          </div>
+
+          <p class="lead text-secondary">Schématisation matérielle</p>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <img src="assets/schematisation-1-demarrage.png" class="figure-img img-fluid rounded shadow-sm" alt="Démarrage du script Python avec le StarryPad" />
+            </div>
+            <div class="col-md-6">
+              <img src="assets/schematisation-2-lumieres.png" class="figure-img img-fluid rounded shadow-sm" alt="Lumières du StarryPad qui s'allument une par une" />
+            </div>
+            <div class="col-md-6">
+              <img src="assets/schematisation-3-repetition.png" class="figure-img img-fluid rounded shadow-sm" alt="Le joueur répète la séquence pour passer au niveau suivant" />
+            </div>
+            <div class="col-md-6">
+              <img src="assets/schematisation-4-game-over.png" class="figure-img img-fluid rounded shadow-sm" alt="Si le joueur rate la séquence, partie terminée" />
+            </div>
+          </div>
+        </section>
+
+        <section id="experimentations" class="mb-5">
+          <h2 class="h3 mb-3">Expérimentations</h2>
+          <p class="lead text-secondary">
+            Précision de l'élément matériel expérimenté
+          </p>
+          <p class="lead text-secondary">
+            Expérimentations nécessaires pour valider l'usage concret proposé
+          </p>
+        </section>
+
+        <section id="avis" class="mb-5">
+          <h2 class="h3 mb-3">Avis</h2>
+          <p class="lead text-secondary">
+            Avis sur la technologie
+          </p>
+          <p class="lead text-secondary">
+            Justification du potentiel de la technologie
+          </p>
+          <p class="lead text-secondary">
+            Avantages et inconvénients comparativement à d'autres technologies similaires pour l'usage concret proposé
+          </p>
+          <p class="lead text-secondary">
+            Avis final
+          </p>
+        </section>
+      </div>
+
+      <footer class="bg-primary py-3 rounded-3 text-light text-center">
+        <div class="container">
+          <p class="mb-2 opacity-75">Veille technologique - TP1 - Cégep Garneau</p>
+          <span class="fs-6">© 2026 - Alexandre Roy</span>
+
+        </div>
+      </footer>
     </main>
   </body>
 </html>
