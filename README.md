@@ -1,1 +1,1 @@
-# starrypad-game
+# starrypad-site
